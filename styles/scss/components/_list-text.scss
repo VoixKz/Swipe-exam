@@ -1,0 +1,7 @@
+.list--text {
+    list-style-image: url(../../img/square-mark.svg);
+    list-style-position: inside;
+    li a {
+        @extend %list-text;
+    }
+}

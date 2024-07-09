@@ -1,0 +1,70 @@
+#team {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.team__container {
+    padding: 50px 70px 100px;
+}
+
+.team__top {
+    @include flex-x();
+    .title {
+        @extend %title;
+    }
+    .team__buttons {
+        @include flex-x();
+        max-width: 365px;
+        width: 100%;
+    }
+}
+
+.team__bottom {
+    @include flex-x();
+    gap: 45px;
+    max-width: 1300px;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.team__members {
+    @include flex-x();
+    max-width: 1140px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+}
+
+.team__human {
+    @include flex-y();
+    text-align: center;
+    .subtitle {
+        margin: 16px 0 12px;
+        @extend %small-title;
+        color: $first-color;
+    }
+    .text {
+        @extend %text;
+        color: $secondary-color;
+    }
+}
+
+
+
+/*Adaptive layout*/
+@media screen and (max-width: 1058px) {
+    .team__top {
+        @include flex-y();
+        gap: 50px;
+        .title {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 778px) {
+    .team__members {
+        display: block;
+    }
+}

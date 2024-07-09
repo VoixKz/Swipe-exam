@@ -1,0 +1,34 @@
+.href-underline {
+    transition: 0.5s ease-in-out;
+    &:after {
+        display: block;
+        content: "";
+        height: 2px;
+        width: 0%;
+        transition: 0.5s ease-in-out;
+    }
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+    &:focus:after {
+        width: 100%;
+    }
+    &--accent {
+        &:after {
+            background-color: $accent-color;
+        }
+        &:hover {
+            color: $accent-color;
+        }
+    }
+    &--orange {
+        &:after {
+            background-color: #ec5c5c;
+        }
+        &:hover {
+            color: #ec5c5c;
+        }
+    }
+}

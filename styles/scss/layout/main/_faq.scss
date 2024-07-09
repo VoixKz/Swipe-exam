@@ -1,0 +1,55 @@
+#faq {
+    max-width: 1440px;
+    width: 100%;
+}
+
+.faq__container {
+    padding: 89px 70px 60px;
+}
+
+.faq__top {
+    margin-bottom: 132px;
+    max-width: 606px;
+    width: 100%;
+    @extend %title;
+}
+
+.faq__item {
+    @include flex-x($jc: start);
+    padding: 40px 0 40px 23px;
+    border-bottom: 2px solid $white-color;
+    img {
+        margin-right: 45px;
+    }
+    .subtitle {
+        width: 730px;
+        @extend %subtitle;
+    }
+}
+
+
+
+/*Image settings*/
+#faq {
+    position: relative;
+    .abs--img {
+        top: -90px;
+        right: 0;
+    }
+    .faq__container {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+
+
+/*Adaptive layout*/
+@media screen and (max-width: 1118px) {
+    .faq__top {
+        max-width: inherit; 
+        .title {
+            text-align: center;
+        }
+    }
+}

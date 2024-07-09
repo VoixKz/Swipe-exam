@@ -1,0 +1,55 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+//Base
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/animations';
+
+
+//Core
+@import 'core/reset';
+
+
+//Components
+@import 'components/href';
+@import 'components/button';
+@import 'components/list-text';
+@import 'components/slider';
+
+
+//Layout
+@import 'layout/header';
+
+@import 'layout/main/about';
+@import 'layout/main/features';
+@import 'layout/main/pricing';
+@import 'layout/main/team';
+@import 'layout/main/faq';
+@import 'layout/main/feedback';
+@import 'layout/main/blog';
+@import 'layout/main/contact';
+
+@import 'layout/main/advantages';
+@import 'layout/main/media';
+
+@import 'layout/footer';
+
+
+
+/*General styles*/
+body {
+    @include flex-y();
+    background-color: #a4b3b5;
+}
+
+main {
+    max-width: 1440px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+.abs--img {
+    position: absolute;
+}

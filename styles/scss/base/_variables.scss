@@ -1,0 +1,52 @@
+$poppins-font: "Poppins", sans-serif;
+$prompt-font: "Prompt", sans-serif;
+$accent-color: #6259EA;
+$first-color: #1A1930;
+$secondary-color: #2D2B5C;
+$white-color: #e7e5ff;
+
+%title {
+    font-family: $poppins-font;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 110%;
+    color: $first-color;
+}
+
+%subtitle {
+    font-family: $poppins-font;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 112%;
+    color: $secondary-color;
+}
+
+%small-title {
+    font-family: $prompt-font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+}
+
+%text {
+    font-family: $prompt-font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+}
+
+%list-text {
+    font-family: $poppins-font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: $first-color;
+}
+
+%button-text {
+    font-family: $poppins-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+}
