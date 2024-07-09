@@ -67,4 +67,20 @@
     .team__members {
         display: block;
     }
+    .team__human {
+        margin-bottom: 30px;
+    }
+    #team .slider {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 398px) {
+    .team__buttons {
+        @include flex-y();
+        gap: 20px;
+        button {
+            width: 100%;
+        }
+    }
 }

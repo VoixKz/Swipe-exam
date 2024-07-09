@@ -50,3 +50,9 @@ $white-color: #e7e5ff;
     font-size: 16px;
     line-height: 140%;
 }
+
+@media screen and (max-width: 528px) {
+    %title {
+        font-size: 50px;
+    }
+}

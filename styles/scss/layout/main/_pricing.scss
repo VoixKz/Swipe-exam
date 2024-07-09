@@ -125,4 +125,18 @@
             width: 100%;
         }
     }
+    .pricing__top {
+        margin-right: 70px;
+        justify-content: center;
+        .title {
+            text-align: center;
+            width: fit-content;
+            box-sizing: border-box;
+            padding: 20px;
+            border-bottom: 2px solid $white-color;
+        }
+        hr {
+            display: none;
+        }
+    }
 }

@@ -45,6 +45,11 @@
   line-height: 140%;
 }
 
+@media screen and (max-width: 528px) {
+  .media__top .title, .contact__top .title, .blog__top .title, .feedback__top .title, .faq__top, .team__top .title, .pricing__item__bottom .pricing__item__price .title, .pricing__top .title, .features__top .title, .about__left .title {
+    font-size: 50px;
+  }
+}
 @keyframes floatBottom {
   0%, 100% {
     transform: translateY(0);
@@ -293,6 +298,9 @@ header .header__container {
   .header__logo-3, .header__logo-4 {
     display: none;
   }
+  .header__bottom__container {
+    padding: 0 15%;
+  }
 }
 #about {
   max-width: 1440px;
@@ -397,8 +405,7 @@ header .header__container {
   .about__item {
     height: auto;
     width: 100%;
-    padding-right: 0;
-    padding-left: 0;
+    padding: 30px 0;
   }
 }
 #features {
@@ -685,6 +692,21 @@ header .header__container {
   .pricing__item__bottom button {
     width: 100%;
   }
+  .pricing__top {
+    margin-right: 70px;
+    justify-content: center;
+  }
+  .pricing__top .title {
+    text-align: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    box-sizing: border-box;
+    padding: 20px;
+    border-bottom: 2px solid #e7e5ff;
+  }
+  .pricing__top hr {
+    display: none;
+  }
 }
 #team {
   max-width: 1440px;
@@ -760,6 +782,24 @@ header .header__container {
 @media screen and (max-width: 778px) {
   .team__members {
     display: block;
+  }
+  .team__human {
+    margin-bottom: 30px;
+  }
+  #team .slider {
+    display: none;
+  }
+}
+@media screen and (max-width: 398px) {
+  .team__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+  }
+  .team__buttons button {
+    width: 100%;
   }
 }
 #faq {
@@ -1038,9 +1078,24 @@ header .header__container {
   margin-bottom: 38px;
 }
 
+.blog__item-left {
+  border-left: none;
+  padding: 20px 65px 0 0;
+}
+
+.blog__item-right {
+  padding: 20px 0 0 65px;
+}
+
 /*Adaptive layout*/
 @media screen and (max-width: 718px) {
+  .blog__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .blog__top {
+    padding-left: 40px;
+    padding-right: 40px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -1198,6 +1253,9 @@ header .header__container {
   }
   .contact__right {
     margin-top: 50px;
+  }
+  textarea {
+    height: 200px;
   }
 }
 .advantages-video {
@@ -1630,4 +1688,137 @@ main {
 
 .abs--img {
   position: absolute;
+  max-width: 100%;
+  height: auto;
+}
+
+/*Finalization adaptive layout for phones*/
+@media screen and (max-width: 528px) {
+  header .header__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  header .header__middle__top .title {
+    font-size: 60px;
+  }
+  #about .about__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #about .about__left .title {
+    font-size: 60px;
+  }
+  #about .about__item__right p {
+    font-size: 60px;
+  }
+  #features .features__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #features .features__item {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .advantages-video .advantages-video__container {
+    padding: 50px 30px 0;
+  }
+  .advantages-video .advantages-video__top, .advantages-video .advantages-video__bottom {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .advantages .advantages__bottom {
+    padding: 0 30px;
+  }
+  #pricing .pricing__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #pricing .pricing__top {
+    margin-right: 0;
+  }
+  #pricing .pricing__bottom {
+    padding-right: 0;
+  }
+  #pricing .pricing__item {
+    padding: 45px 30px 52px;
+  }
+  #team .team__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #faq .faq__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #faq .faq__item {
+    padding-left: 0;
+  }
+  #faq .faq__item img {
+    margin-right: 30px;
+  }
+  #faq .faq__item p {
+    font-size: 30px;
+  }
+  #feedback .feedback__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #feedback .feedback__top, #feedback .feedback__bottom {
+    margin-right: 0;
+  }
+  #feedback .feedback__bottom {
+    padding: 50px 30px;
+  }
+  #feedback .feedback__info__middle {
+    margin-right: 0;
+    text-align: center;
+  }
+  #feedback .feedback__avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  #blog .blog__item {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #blog .blog__item img {
+    max-width: 100%;
+    height: auto;
+  }
+  #blog .blog__item .subtitle {
+    font-size: 25px;
+  }
+  #blog .blog__item-left {
+    padding-left: 0;
+    padding-right: 30px;
+  }
+  #blog .blog__item-right {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+  #contact .contact__container {
+    padding: 0 30px 50px;
+  }
+  #contact .contact__top, #contact .contact__bottom {
+    margin-right: 0;
+  }
+  #contact .contact__left {
+    padding: 0;
+  }
+  #contact textarea {
+    height: 300px;
+  }
+  #media .media__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  #media .media__bottom {
+    gap: 10px;
+  }
+  #media .media__list {
+    width: 200px;
+    gap: 0;
+  }
 }

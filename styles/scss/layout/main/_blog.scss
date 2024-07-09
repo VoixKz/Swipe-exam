@@ -51,11 +51,26 @@
     }
 }
 
+.blog__item-left {
+    border-left: none; 
+    padding: 20px 65px 0 0;
+}
+
+.blog__item-right {
+    padding: 20px 0 0 65px;
+}
+
 
 
 /*Adaptive layout*/
 @media screen and (max-width: 718px) {
+    .blog__container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
     .blog__top {
+        padding-left: 40px;
+        padding-right: 40px;
         @include flex-y();
         gap: 50px;
         text-align: center;
