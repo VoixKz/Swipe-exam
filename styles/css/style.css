@@ -381,6 +381,7 @@ header .header__contacts img:hover {
   align-items: center;
   width: 820px;
   padding-right: 70px;
+  gap: 20px;
 }
 
 .about__item__left {
@@ -407,6 +408,20 @@ header .header__contacts img:hover {
   color: #2D2B5C;
 }
 
+/*Image settings*/
+#about {
+  position: relative;
+}
+#about .abs--img {
+  top: -95px;
+  animation: floatBottom 3s linear infinite;
+}
+#about .about__container {
+  position: relative;
+  z-index: 1;
+}
+
+/*Adaptive layout*/
 @media screen and (max-width: 1318px) {
   .about__container {
     display: flex;
@@ -434,20 +449,6 @@ header .header__contacts img:hover {
     top: 0;
   }
 }
-/*Image settings*/
-#about {
-  position: relative;
-}
-#about .abs--img {
-  top: -95px;
-  animation: floatBottom 3s linear infinite;
-}
-#about .about__container {
-  position: relative;
-  z-index: 1;
-}
-
-/*Adaptive layout*/
 @media screen and (max-width: 818px) {
   .about__item {
     height: auto;
@@ -1745,7 +1746,6 @@ body {
   justify-content: start;
   align-items: center;
   background-color: #a4b3b5;
-  overflow-x: hidden;
 }
 
 main {
