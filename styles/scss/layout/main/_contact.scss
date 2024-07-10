@@ -109,10 +109,12 @@
     .abs--img1 {
         top: 50px;
         left: -1px;
+        animation: floatBottom 5s linear infinite;
     }
     .abs--img2 {
         right: 12px;
         top: 220px;
+        animation: rotate_pulse 10s linear infinite;
     }
     .contact__container {
         position: relative;

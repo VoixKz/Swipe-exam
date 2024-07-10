@@ -35,6 +35,8 @@
     .abs--img {
         top: -90px;
         right: 0;
+        animation: shrinkX 10s linear infinite;
+        transform-origin: center right;
     }
     .faq__container {
         position: relative;

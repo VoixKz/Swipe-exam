@@ -121,10 +121,13 @@
     position: relative;
     .abs--img1 {
         top: 244px;
+        animation: shrinkX 5s ease-out infinite;
+        transform-origin: center left;
     }
     .abs--img2 {
         right: 87px;
         bottom: 5px;
+        animation: floatTop 5s linear infinite;
     }
     .advantages__container {
         position: relative;

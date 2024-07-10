@@ -80,6 +80,7 @@ footer {
     .abs--img {
         right: 0;
         bottom: 5px;
+        animation: shrinkY 10s ease-out infinite;
     }
 }
 

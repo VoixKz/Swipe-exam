@@ -55,7 +55,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
 }
 @keyframes floatTop {
@@ -63,7 +63,15 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-30px);
+  }
+}
+@keyframes floatX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
   }
 }
 @keyframes shrinkY {
@@ -71,15 +79,48 @@
     transform: scaleY(1);
   }
   50% {
-    transform: scaleY(0.95);
+    transform: scaleY(0.85);
   }
 }
 @keyframes shrinkX {
-  0%, 100% {
+  0%, 50%, 100% {
     transform: scaleX(1);
   }
-  50% {
+  25% {
     transform: scaleX(0.95);
+  }
+  75% {
+    transform: scaleX(1.1);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+@keyframes rotate_pulse {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
   }
 }
 * {
@@ -284,10 +325,15 @@ header {
 }
 header .abs--img {
   right: 0;
+  animation: shrinkY 10s linear infinite;
+  transform-origin: top center;
 }
 header .header__container {
   position: relative;
   z-index: 1;
+}
+header .header__contacts img:hover {
+  animation: rotation 3s linear infinite;
 }
 
 /*Adaptive layout*/
@@ -394,6 +440,7 @@ header .header__container {
 }
 #about .abs--img {
   top: -95px;
+  animation: floatBottom 3s linear infinite;
 }
 #about .about__container {
   position: relative;
@@ -485,14 +532,17 @@ header .header__container {
 #features .abs--img1 {
   top: 430px;
   left: 10px;
+  animation: rotate_pulse 10s linear infinite;
 }
 #features .abs--img2 {
   bottom: -37px;
   left: 443px;
+  animation: rotate_pulse 12s linear infinite;
 }
 #features .abs--img3 {
   right: 33px;
   top: 320px;
+  animation: rotate_pulse 15s linear infinite;
 }
 #features .features__container {
   position: relative;
@@ -659,10 +709,12 @@ header .header__container {
 #pricing .abs--img1 {
   top: 50px;
   left: -1px;
+  animation: floatBottom 5s linear infinite;
 }
 #pricing .abs--img2 {
   right: 12px;
   top: 420px;
+  animation: rotate_pulse 10s linear infinite;
 }
 #pricing .pricing__container {
   position: relative;
@@ -838,6 +890,8 @@ header .header__container {
 #faq .abs--img {
   top: -90px;
   right: 0;
+  animation: shrinkX 10s linear infinite;
+  transform-origin: center right;
 }
 #faq .faq__container {
   position: relative;
@@ -962,10 +1016,12 @@ header .header__container {
 }
 #feedback .abs--img1 {
   top: -87px;
+  animation: floatBottom 5s linear infinite;
 }
 #feedback .abs--img2 {
   bottom: 46px;
   right: 221px;
+  animation: rotate_pulse 10s linear infinite;
 }
 #feedback .feedback__container {
   position: relative;
@@ -1042,6 +1098,7 @@ header .header__container {
   overflow-x: auto;
   scroll-behavior: smooth;
   width: 100%;
+  max-width: 100vw;
 }
 .blog__bottom::-webkit-scrollbar {
   display: none;
@@ -1214,10 +1271,12 @@ header .header__container {
 #contact .abs--img1 {
   top: 50px;
   left: -1px;
+  animation: floatBottom 5s linear infinite;
 }
 #contact .abs--img2 {
   right: 12px;
   top: 220px;
+  animation: rotate_pulse 10s linear infinite;
 }
 #contact .contact__container {
   position: relative;
@@ -1385,10 +1444,13 @@ header .header__container {
 }
 .advantages .abs--img1 {
   top: 244px;
+  animation: shrinkX 5s ease-out infinite;
+  transform-origin: center left;
 }
 .advantages .abs--img2 {
   right: 87px;
   bottom: 5px;
+  animation: floatTop 5s linear infinite;
 }
 .advantages .advantages__container {
   position: relative;
@@ -1603,6 +1665,7 @@ footer {
 footer .abs--img {
   right: 0;
   bottom: 5px;
+  animation: shrinkY 10s ease-out infinite;
 }
 
 /*Adaptive layout*/
@@ -1672,12 +1735,17 @@ footer .abs--img {
   }
 }
 /*General styles*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   background-color: #a4b3b5;
+  overflow-x: hidden;
 }
 
 main {

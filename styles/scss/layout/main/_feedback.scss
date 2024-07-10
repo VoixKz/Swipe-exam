@@ -93,10 +93,12 @@
     position: relative;
     .abs--img1 {
         top: -87px;
+        animation: floatBottom 5s linear infinite;
     }
     .abs--img2 {
         bottom: 46px;
         right: 221px;
+        animation: rotate_pulse 10s linear infinite;
     }
     .feedback__container {
         position: relative;
