@@ -46,7 +46,7 @@ html {
 body {
     @include flex-y();
     background-color: #a4b3b5;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 main {
