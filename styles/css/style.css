@@ -1762,6 +1762,12 @@ main {
 
 /*Finalization adaptive layout for phones*/
 @media screen and (max-width: 528px) {
+  #pricing .abs--img2, #contact .abs--img2, #features .abs--img2 {
+    display: none;
+  }
+  #features .abs--img3 {
+    display: none;
+  }
   header .header__container {
     padding-left: 30px;
     padding-right: 30px;
@@ -1888,5 +1894,6 @@ main {
   #media .media__list {
     width: 200px;
     gap: 0;
+    display: none;
   }
 }

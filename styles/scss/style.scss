@@ -64,6 +64,16 @@ main {
 
 /*Finalization adaptive layout for phones*/
 @media screen and (max-width: 528px) {
+    #pricing, #contact, #features {
+        .abs--img2 {
+            display: none
+        }
+    }
+    #features {
+        .abs--img3 {
+            display: none;
+        }
+    }
     header {
         .header__container {
             padding-left: 30px;
@@ -208,6 +218,7 @@ main {
         .media__list {
             width: 200px;
             gap: 0;
+            display: none;
         }
     }
 }
