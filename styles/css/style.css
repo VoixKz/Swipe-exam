@@ -1769,6 +1769,9 @@ main {
   #features .abs--img3 {
     display: none;
   }
+  .advantages .abs--img1 {
+    display: none;
+  }
   header .header__container {
     padding-left: 30px;
     padding-right: 30px;
